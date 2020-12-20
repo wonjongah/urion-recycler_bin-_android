@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/back_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginedActivity">
+
+    <ImageView
+        android:id="@+id/iv_bottle"
+        android:layout_width="357dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/urion" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="환영합니다!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="총 포인트 2100 point"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nick"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_qr_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="QR 로그인"
+        android:textColor="#03958D"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#00BFB5"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/btn_detail"
+        android:layout_width="156dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="포인트 상세보기"
+        android:textColor="#03958D"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_point"
+        app:strokeColor="#00BFB5"
+        app:strokeWidth="1dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임님"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_point"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bottle"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
