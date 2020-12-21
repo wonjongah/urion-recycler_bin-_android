@@ -36,12 +36,12 @@ public class DetailActivity extends AppCompatActivity {
     Integer bottle_id = 0;
     Integer bottle_point = 0;
     String image_url = "";
-    Timestamp date;
+    String date;
     List<String> listTitle;
     List<String> listContent;
     List<String> listKind =  new ArrayList<String>();
     List<Integer> listPoint = new ArrayList<Integer>();
-    List<Timestamp> listDate =  new ArrayList<Timestamp>();
+    List<String> listDate =  new ArrayList<String>();
     List<String> listImage = new ArrayList<String>();
 
 
@@ -132,7 +132,7 @@ public class DetailActivity extends AppCompatActivity {
                 st = conn.createStatement();
 
 
-                result = st.executeQuery(String.format("select image, bottle_class, Datetime from recycle_bottle where user_rfid = '%s'", id));
+                result = st.executeQuery(String.format("select image, bottle_class, datetime from recycle_bottle where user_rfid = '%s' order by datetime desc", id));
                 while (result.next()) {
 
 //                    for(int i = 0; i < result.getFetchSize(); i++){
@@ -205,7 +205,8 @@ public class DetailActivity extends AppCompatActivity {
                         }
 //                        image, bottle_class, Datetime
                         image_url = result.getString("image");
-                        date = result.getTimestamp("Datetime");
+                        date = String.valueOf(result.getTimestamp("datetime")).replace("-","/");
+                        date = date.substring(0, date.length()-2);
 
                         listImage.add(image_url);
                         listDate.add(date);

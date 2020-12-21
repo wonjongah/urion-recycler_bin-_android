@@ -22,11 +22,9 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        TextView tv = findViewById(R.id.test_tv);
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
-        tv.setText(id);
 
         ImageView iv = (ImageView)findViewById(R.id.qrcode);
 

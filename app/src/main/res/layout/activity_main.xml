@@ -7,12 +7,11 @@
     android:background="@drawable/background">
 
 
-
-
     <TextView
         android:id="@+id/tv_bottle_point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:text="아이디"
         app:layout_constraintBaseline_toBaselineOf="@+id/edt_id"
         app:layout_constraintEnd_toStartOf="@+id/edt_id"
@@ -23,6 +22,7 @@
         android:layout_width="199dp"
         android:layout_height="49dp"
         android:layout_marginTop="180dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/edt_password"
@@ -34,6 +34,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:text="비밀번호"
         app:layout_constraintBaseline_toBaselineOf="@+id/edt_password"
         app:layout_constraintEnd_toStartOf="@+id/edt_password"
@@ -43,6 +44,7 @@
         android:id="@+id/edt_password"
         android:layout_width="202dp"
         android:layout_height="47dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btn_pass"
@@ -86,7 +88,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="22dp"
         android:text="Urion"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@color/white"

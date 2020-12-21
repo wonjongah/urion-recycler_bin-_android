@@ -7,7 +7,7 @@ public class Data {
 
     private String bottleKind;
     private Integer BottlePoint;
-    private Timestamp date;
+    private String date;
     private String resId;
 
     public String getBottleKind() {
@@ -26,11 +26,11 @@ public class Data {
         this.BottlePoint = BottlePoint;
     }
 
-    public Timestamp getDate(){
+    public String getDate(){
         return date;
     }
 
-    public void setDate(Timestamp date){
+    public void setDate(String date){
         this.date = date;
     }
 

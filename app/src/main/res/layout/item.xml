@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="89dp"
+    android:layout_height="92dp"
     android:layout_marginBottom="8dp"
     android:background="@android:color/white"
     android:gravity="center_vertical"
@@ -43,8 +43,7 @@
             android:includeFontPadding="false"
             android:text="TITLE"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-             />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
@@ -65,8 +64,7 @@
             android:includeFontPadding="false"
             android:text="TITLE"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-             />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
@@ -86,8 +84,7 @@
             android:includeFontPadding="false"
             android:text="TITLE"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-             />
+            android:textSize="15sp" />
 
     </LinearLayout>
 

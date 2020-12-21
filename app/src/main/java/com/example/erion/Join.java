@@ -92,7 +92,7 @@ public class Join extends AppCompatActivity {
                 int total_point = 0;
 
 
-                String insertRow1 = String.format("INSERT INTO recycle_ruser (rfid,nickname,pw,total_point) VALUES (%s,%s,%s,%d);", id_value, nick_value, pass_value, total_point);
+                String insertRow1 = String.format("INSERT INTO recycle_ruser (rfid,nickname,pw,total_point) VALUES ('%s','%s','%s',%d);", id_value, nick_value, pass_value, total_point);
 
 //                stmt.executeUpdate(sql);
 //                stmt.close();
@@ -106,48 +106,6 @@ public class Join extends AppCompatActivity {
                 conn.commit();
                 conn.close();
 
-
-//                result = st.executeQuery("select * from recycle_ruser");
-//
-//                while (result.next())
-//
-//                {
-//
-//                    String rfid = result.getString("rfid");
-//                    System.out.println("rfid: " + rfid);
-//
-//                }
-//
-//                st.close();
-//
-//                conn.close();
-
-
-//                String insertRow1 = "INSERT INTO Beanstalk (Resource) VALUES ('EC2 Instance');";
-//
-//                setupStatement.addBatch(insertRow1);
-//                setupStatement.executeBatch();
-//                setupStatement.close();
-
-
-//                c.setAutoCommit(false);
-//                System.out.println("Opened database successfully");
-//                stmt = c.createStatement();
-//                String sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "
-//                        + "VALUES (1, 'Paul', 32, 'California', 20000.00 );";
-//                stmt.executeUpdate(sql);
-//                sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "
-//                        + "VALUES (2, 'Allen', 25, 'Texas', 15000.00 );";
-//                stmt.executeUpdate(sql);
-//                sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "
-//                        + "VALUES (3, 'Teddy', 23, 'Norway', 20000.00 );";
-//                stmt.executeUpdate(sql);
-//                sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "
-//                        + "VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 );";
-//                stmt.executeUpdate(sql);
-//                stmt.close();
-//                c.commit();
-//                c.close();
 
 
             } catch (SQLException | ClassNotFoundException throwables) {

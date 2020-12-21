@@ -10,8 +10,7 @@
         android:id="@+id/tv_detail_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="260dp"
         android:text="닉네임님의 포인트 내역입니다"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/r_detail"
@@ -21,9 +20,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/r_detail"
-        android:layout_width="406dp"
-        android:layout_height="594dp"
-        android:layout_marginBottom="120dp"
+        android:layout_width="405dp"
+        android:layout_height="496dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"

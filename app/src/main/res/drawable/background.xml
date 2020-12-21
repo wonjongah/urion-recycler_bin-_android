@@ -16,7 +16,7 @@
         android:top="197dp"
         android:right="20dp"
         android:left="20dp"
-        android:height="250dp">
+        android:height="255dp">
         <shape
             android:shape="rectangle">
             <solid android:color="@color/white"></solid>
