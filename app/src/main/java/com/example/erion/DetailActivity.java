@@ -118,11 +118,10 @@ public class DetailActivity extends AppCompatActivity {
             try {
                 //STEP 2: Register JDBC driver\
                 Class.forName("org.postgresql.Driver");
-                //DriverManager.registerDriver(new org.postgresql.Driver());
-                //DriverManager.registerDriver(new Driver());
+
                 //STEP 3: Open a connection
                 System.out.println("Connecting to database...");
-                conn = DriverManager.getConnection("jdbc:postgresql://recycledb.c8eedu3otduy.us-east-1.rds.amazonaws.com:5432/recycledb","team05","adminyes");
+                conn = DriverManager.getConnection("jdbc:postgresql://DB_NAME.ENDPOINT:5432/recycledb","USER","PASS");
                 if (conn != null) {
                     Log.d("succes","You made it, take control your database now!");
                 } else {
@@ -135,7 +134,6 @@ public class DetailActivity extends AppCompatActivity {
                 result = st.executeQuery(String.format("select image, bottle_class, datetime from recycle_bottle where user_rfid = '%s' order by datetime desc", id));
                 while (result.next()) {
 
-//                    for(int i = 0; i < result.getFetchSize(); i++){
                         Integer kind = result.getInt("bottle_class");
                         switch (kind){
                             case 0:
@@ -210,10 +208,8 @@ public class DetailActivity extends AppCompatActivity {
 
                         listImage.add(image_url);
                         listDate.add(date);
-//                    }
-//                    nick_value = result.getString("nickname");
-//                    id = result.getDate()
-//                    total_point = String.valueOf(result.getInt("total_point"));
+
+
                 }
 
                 new Thread()
