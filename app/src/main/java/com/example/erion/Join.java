@@ -77,7 +77,7 @@ public class Join extends AppCompatActivity {
                 //DriverManager.registerDriver(new Driver());
                 //STEP 3: Open a connection
                 System.out.println("Connecting to database...");
-                conn = DriverManager.getConnection("jdbc:postgresql://recycledb.c8eedu3otduy.us-east-1.rds.amazonaws.com:5432/recycledb","team05","adminyes");
+                conn = DriverManager.getConnection("jdbc:postgresql://DB_NAME.ENDPOINT:5432/recycledb","USER","PASS");
                 if (conn != null) {
                     Log.d("succes","You made it, take control your database now!");
                 } else {
