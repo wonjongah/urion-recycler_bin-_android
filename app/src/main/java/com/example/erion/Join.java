@@ -73,8 +73,7 @@ public class Join extends AppCompatActivity {
             try {
                 //STEP 2: Register JDBC driver\
                 Class.forName("org.postgresql.Driver");
-                //DriverManager.registerDriver(new org.postgresql.Driver());
-                //DriverManager.registerDriver(new Driver());
+
                 //STEP 3: Open a connection
                 System.out.println("Connecting to database...");
                 conn = DriverManager.getConnection("jdbc:postgresql://DB_NAME.ENDPOINT:5432/recycledb","USER","PASS");
@@ -94,12 +93,6 @@ public class Join extends AppCompatActivity {
 
                 String insertRow1 = String.format("INSERT INTO recycle_ruser (rfid,nickname,pw,total_point) VALUES ('%s','%s','%s',%d);", id_value, nick_value, pass_value, total_point);
 
-//                stmt.executeUpdate(sql);
-//                stmt.close();
-//                c.commit();
-//                c.close();
-//                st.addBatch(insertRow1);
-//                st.executeBatch();
                 st.executeUpdate(insertRow1);
                 st.close();
                 //                c.commit();
